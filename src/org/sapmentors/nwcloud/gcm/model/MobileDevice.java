@@ -30,9 +30,11 @@ public class MobileDevice {
 	
 	@Id
 	@Basic
-	private String registrationKey;
+	@Column(nullable = false, length = 512) 
+	String registrationKey;
 	
 	@Basic
+	@Column(nullable = false, length = 512) 
 	private String email;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -40,6 +42,7 @@ public class MobileDevice {
 	private Date timeCreated;
 	
 	@Basic 
+	@Column(nullable = false, length = 512) 
 	private String mobilePlatform;
 	
 	public MobileDevice(){
