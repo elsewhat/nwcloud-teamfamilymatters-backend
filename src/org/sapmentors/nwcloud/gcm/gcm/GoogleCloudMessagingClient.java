@@ -24,7 +24,7 @@ import com.google.android.gcm.server.Sender;
 public class GoogleCloudMessagingClient {
 	private final static Logger logger = LoggerFactory.getLogger(GoogleCloudMessagingClient.class);
 	//The server's key from the Google GCM API project
-	private static final String GCM_API_KEY = "AIzaSyBWxYKSdl1NEHHDFxqE64ZUA8ibJNIwKww";
+	private static final String GCM_API_KEY = "AIzaSyCMipXhUszkNZxN1n8cNqPr6QIg47K9cAk";
 	
 	private PushMessageInternal pushMessage; 
 	private PersistenceClient persistenceClient;
