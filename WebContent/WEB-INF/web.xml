@@ -13,14 +13,14 @@
     <description>JAX-RS Tools Generated - Do not modify</description>
     <servlet-name>REST Servlet JAX-RS</servlet-name>
     <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
-    <init-param>  
-      <param-name>javax.ws.rs.Application</param-name>  
-      <param-value>org.sapmentors.nwcloud.gcm.jersey.JAXRSApplication</param-value>  
-    </init-param>  
     <init-param>
-			<param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
-			<param-value>org.sapmentors.nwcloud.gcm.filter.ResponseCorsFilter</param-value>
-		</init-param>
+      <param-name>javax.ws.rs.Application</param-name>
+      <param-value>org.sapmentors.nwcloud.gcm.jersey.JAXRSApplication</param-value>
+    </init-param>
+    <init-param>
+      <param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
+      <param-value>org.sapmentors.nwcloud.gcm.filter.ResponseCorsFilter</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
@@ -28,7 +28,17 @@
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
   <resource-ref>
-  	<res-ref-name>jdbc/DefaultDB</res-ref-name>
-  	<res-type>javax.sql.DataSource</res-type>
+    <res-ref-name>jdbc/DefaultDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
   </resource-ref>
+  <servlet>
+    <description></description>
+    <display-name>RequestForServiceServlet</display-name>
+    <servlet-name>RequestForServiceServlet</servlet-name>
+    <servlet-class>org.sapmentors.nwcloud.gcm.servlet.RequestForServiceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestForServiceServlet</servlet-name>
+    <url-pattern>/RequestForService</url-pattern>
+  </servlet-mapping>
 </web-app>

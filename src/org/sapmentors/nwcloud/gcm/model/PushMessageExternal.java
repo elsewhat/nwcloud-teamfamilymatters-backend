@@ -15,6 +15,14 @@ public class PushMessageExternal {
 	protected String emailFrom; 
 	protected String[] emailTo; 
 	protected int messageType; 
+	protected String id;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	protected String message;
 	
 	public String getEmailFrom() {

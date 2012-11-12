@@ -4,6 +4,7 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>org.sapmentors.nwcloud.gcm.model.MobileDevice</class>
 		<class>org.sapmentors.nwcloud.gcm.model.Family</class>
+		<class>org.sapmentors.nwcloud.gcm.model.RequestForService</class>
 		<properties>
 			<property name="eclipselink.ddl-generation" value="create-tables"/>
 		</properties>

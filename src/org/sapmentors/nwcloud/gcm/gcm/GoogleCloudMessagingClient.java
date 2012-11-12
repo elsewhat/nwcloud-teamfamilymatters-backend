@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
+import org.json.simple.JSONObject;
 import org.sapmentors.nwcloud.gcm.model.MobileDevice;
 import org.sapmentors.nwcloud.gcm.model.PersistenceClient;
 import org.sapmentors.nwcloud.gcm.model.PushMessageExternal;
@@ -97,12 +98,22 @@ public class GoogleCloudMessagingClient {
 		Sender sender = new Sender(GCM_API_KEY);
 		
 		String message = pushMessage.getMessage();
+		if(message==null){
+			message="No message";
+		}
 		// Trim message if needed.
-		if (message.length() > 1000) {
-			message = message.substring(0, 1000) + "[...]";
+		if (message.length() > 950) {
+			message = message.substring(0, 950) + "[...]";
 		}
 
-		Message msg = new Message.Builder().addData("message", message).build();
+		JSONObject jsonObject = new JSONObject ();
+		jsonObject.put("id", pushMessage.getId());
+		jsonObject.put("type", pushMessage.getMessageType());
+		jsonObject.put("message", message);
+		String jsonString = jsonObject.toJSONString();
+		
+		//Message msg = new Message.Builder().addData("message", message).build();
+		Message msg = new Message.Builder().addData("message",jsonString ).build();
 		
 		List<MobileDevice> listRecipients = pushMessage.getDevicesTo();
 		
