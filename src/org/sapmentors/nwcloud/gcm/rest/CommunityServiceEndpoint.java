@@ -47,6 +47,7 @@ public class CommunityServiceEndpoint {
           listServices.add(new CommunityService("ga","Gardener","http://dummy"));
           listServices.add(new CommunityService("gr","Groceries","http://dummy"));
           listServices.add(new CommunityService("to","Borrow tools","http://dummy"));
+          listServices.add(new CommunityService("pd","Playdate","http://dummy"));
           
           return listServices;          
     }

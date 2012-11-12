@@ -33,8 +33,8 @@ public class Family {
 	
 	
 	@Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Basic(optional = false) 
+    @GeneratedValue
+    @Basic
 	long id;
 	
 	@Basic

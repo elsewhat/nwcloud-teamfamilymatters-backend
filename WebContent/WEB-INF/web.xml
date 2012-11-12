@@ -17,6 +17,10 @@
       <param-name>javax.ws.rs.Application</param-name>  
       <param-value>org.sapmentors.nwcloud.gcm.jersey.JAXRSApplication</param-value>  
     </init-param>  
+    <init-param>
+			<param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
+			<param-value>org.sapmentors.nwcloud.gcm.filter.ResponseCorsFilter</param-value>
+		</init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>

@@ -48,7 +48,7 @@ public class GenerateTestDataEndpoint {
 
 	
 	/**
-	 * 
+	 * curl  -i -X DELETE -H "Accept: application/json" https://familymatterinnojam.netweaver.ondemand.com/nwcloud-teamfamilymatters-backend/api/testdata
 	 * curl  -i -X DELETE -H "Accept: application/json" http://localhost:8433/nwcloud-teamfamilymatters-backend/api/testdata
 	 */
 	@DELETE

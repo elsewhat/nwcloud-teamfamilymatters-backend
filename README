@@ -16,3 +16,5 @@ Uses the framework provided by the mobile platform. Currently, only Google Cloud
 (requires that we create a Google API project with GCM and that we generate a server API key)
 
 This project uses JPA for persistence and Jersey for REST interface.
+
+Some data from http://geo.oiorest.dk/
