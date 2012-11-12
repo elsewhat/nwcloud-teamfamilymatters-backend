@@ -13,7 +13,7 @@ public class CommunityService {
 	public CommunityService() {
 		super();
 	}
-	public CommunityService(String name, String id, String imageURL) {
+	public CommunityService(String id, String name, String imageURL) {
 		super();
 		this.name = name;
 		this.id = id;

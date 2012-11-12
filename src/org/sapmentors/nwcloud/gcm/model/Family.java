@@ -90,13 +90,13 @@ public class Family {
 	public Family(){
 	}
 
-	public Family(long id, String email, String adresse, String owner,
+	public Family(String email, String adresse, String owner,
 			String latitude, String longitude, String fatherName,
 			String motherName, int nrKids, int kid1Age, int kid2Age,
 			int kid3Age, boolean kid1IsGirl, boolean kid2IsGirl,
 			boolean kid3IsGirl) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.email = email;
 		this.adresse = adresse;
 		this.owner = owner;
@@ -232,7 +232,17 @@ public class Family {
 	public void setKid3IsGirl(boolean kid3IsGirl) {
 		this.kid3IsGirl = kid3IsGirl;
 	}
-	
-	
+
+	public static Family createExampleFamily(String adresse, String owner,
+			String latitude, String longitude) {
+		
+		//INSERT INTO T_FAMILY (email, adresse,owner, latitude,longitude,fatherName, motherName,nrKids,kid1Age,kid2Age,kid3Age,kid1IsGirl,kid2IsGirl,kid3IsGirl) VALUES('dagfinn.parnas@gmail.com', 'Vestervangsvej 12', 'Viborg Markjorder','56.4596428717208','9.39419077219749','Phil', 'Martha', 2,12,7,-1,0,1,0);
+		Family newFamily = new Family("dagfinn.parnas@gmail.com", adresse, owner, latitude, longitude, "Phil", "Martha", 2, 11, 3, -1, false, true, false);
+		return newFamily;
+		
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }
