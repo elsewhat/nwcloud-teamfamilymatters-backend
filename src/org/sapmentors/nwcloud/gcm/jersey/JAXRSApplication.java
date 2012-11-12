@@ -5,6 +5,8 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+import org.sapmentors.nwcloud.gcm.rest.CommunityServiceEndpoint;
+import org.sapmentors.nwcloud.gcm.rest.GenerateTestDataEndpoint;
 import org.sapmentors.nwcloud.gcm.rest.MobileDeviceEndpoint;
 import org.sapmentors.nwcloud.gcm.rest.MessagingEndpoint;
 
@@ -24,6 +26,8 @@ public class JAXRSApplication extends Application {
 		//Add all endpoints to this set
 		set.add(MobileDeviceEndpoint.class);
 		set.add(MessagingEndpoint.class);
+		set.add(CommunityServiceEndpoint.class);
+		set.add(GenerateTestDataEndpoint.class);
 		//Add Providers
 		set.add(JAXBContextResolver.class);
 		return set;
